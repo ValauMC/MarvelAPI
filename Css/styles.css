@@ -1,0 +1,108 @@
+/* *------------------------------------------------------ Configuraciones Generales ---------------------------------------------------- */
+
+@font-face{
+    font-family: 'Playfair';
+    src: url('../assets/font/Freeman-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair', sans-serif;
+    background-color:  #49555E;
+}
+/* * ------------------------------------------------------------------------------------------------------------------------------------ */
+/* ? ------------------------------------------------- Cabecera ------------------------------------------------------------------------- */
+
+header{
+    text-align: center;
+    background-color: #98a8ff;
+}
+
+header img {
+    width: 20rem; /* Rem es una medida relativa, 1rem equivale a 16px */
+}
+/* ? -------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------Contenido Principal ----------------------------------------------------------------- */
+/* !--------------- Card------------- */
+    .card{
+    width: 18rem;
+    text-align: center;
+    border: 0.8rem solid white;
+    border-radius: 15%;
+    background-color: #f27272;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    }
+
+    .card:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        color: black;
+    }
+
+    .card__img{
+        width: 70%;
+    }
+
+    .card__detail {
+        border-radius: 5%;
+        border: 0.8rem solid white;
+    }
+/* !--------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+/* TODO: ------------------------------------------------------ Pie de Página ---------------------------------------------------------- */
+footer {
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-color: #98a8ff;
+    color: rgb(0, 0, 0);
+}
+/* TODO: ------------------------------------------------------ Pie de Página ---------------------------------------------------------- */
+/* ? ------------------------------------------------- Final -------------------------------------------------------------------------- */
+
+.marvel__inicio{
+    background-color: #49555E;
+}
+/* ? -------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- Media Queries ----------------------------------*/
+@media (width <= 320px) {
+    #marvel {
+    grid-template-columns: repeat(1, 15rem);
+    }
+}
+
+@media (width >= 768px) {
+    #marvel {
+    grid-template-columns: repeat(2, 15rem);
+    }
+}
+
+@media (width >= 910px) {
+    #marvel {
+    grid-template-columns: repeat(3, 15rem);
+    }
+}
+
+@media (width >= 1024px) {
+    #marvel {
+    grid-template-columns: repeat(4, 15rem);
+    }
+}
+
+@media (width >= 1440px) {
+    #marvel {
+    grid-template-columns: repeat(5, 15rem);
+    }
+}
+
+@media (width >= 2560px) {
+    #marvel {
+    grid-template-columns: repeat(8, 15rem);
+    }
+}
+/* ---------------------------------------------------------------------------------------------------------*/
