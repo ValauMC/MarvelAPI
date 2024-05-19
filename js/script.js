@@ -6,7 +6,7 @@ const requestOptions = {
 const apikey = '4a2119ed87b7a8e77d7fc1e7c35c5465';
 const ts = '1';
 const hash = 'b66bcb000de3e394d472f739e0851940';
-const url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apikey}&ts=${ts}&hash=${hash}`;
+const url = `https://gateway.marvel.com:443/v1/public/characters?apikey=${apikey}&ts=${ts}&hash=${hash}&limit=72`;
 const marvel = document.getElementById("marvel");
 
 /* makeRequest (url, "getMarvel(data)") */
@@ -49,8 +49,7 @@ const printData = (personajes) => {
             <div class="card-body">
                 <h1 class="card-title">${name[i]}</h1>
             </div>
-            <p>${bio[i]}</p>
-            <button class="boton" onclick="showDetail('${name}', '${url}', '${bio}')"> Más información</button>
+            <button class="boton" onclick="showDetail('${name [i]}', '${img[i]}', '${bio[i].replace(/'/g, "\\'")}')"> Más información</button>
         </div>
         `
     }
@@ -64,12 +63,16 @@ function showDetail(name, img, bio) {
         title: name,
         imageUrl: img,
         html: bio,
-        width: 600,
+        width: 390,
+        height: 175,
         padding: "3em",
-        color: "#716add",
-        background: "#fff url(/images/trees.png)",
+        color: "black",
+        background: "#ffc0cb",
+        customClass: {
+            popup:'card__detail'
+        },
         backdrop: `
-        rgba(0,0,123,0.4)
+        rgba(211, 211, 211, 0.2)
         url("../assets/img/Rocket.gif")
         left top
         no-repeat
