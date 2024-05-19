@@ -49,9 +49,8 @@ const printData = (personajes) => {
             <div class="card-body">
                 <h1 class="card-title">${name[i]}</h1>
             </div>
-            <a href="" target="_blank">
+            <p>${bio[i]}</p>
             <button class="boton" onclick="showDetail('${name}', '${url}', '${bio}')"> Más información</button>
-            </a>
         </div>
         `
     }
@@ -62,7 +61,9 @@ const printData = (personajes) => {
         
 function showDetail(name, img, bio) {
     Swal.fire({
-        title: "Custom width, padding, color, background.",
+        title: name,
+        imageUrl: img,
+        html: bio,
         width: 600,
         padding: "3em",
         color: "#716add",
